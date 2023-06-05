@@ -1,0 +1,29 @@
+evaluation:
+  greedy: True # Whether or not to use sampling ; use greedy decoding otherwise
+  top_k: 0  # The number of highest probability vocabulary tokens to keep for top-k-filtering.
+  top_p: 0.9 # If set to float < 1, only the most probable tokens with probabilities that add up to top_p or higher are kept for generation.
+  temperature: 1.0 # sampling temperature
+  add_BOS: False # add the bos token at the begining of the prompt
+  repetition_penalty: 1.0  # The parameter for repetition penalty. 1.0 means no penalty.
+
+trainer:
+  devices: 1
+  num_nodes: 1
+  accelerator: gpu
+  logger: False # logger provided by exp_manager
+  precision: bf16
+
+model:
+  tensor_model_parallel_size: 1
+  pipeline_model_parallel_size: 1
+  pipeline_model_parallel_split_rank: 0 # used for encoder and decoder model
+  gpt_model_file: # GPT nemo file path
+    - /data/imoshkov/converted_checkpoints/gpt3-843m-multi-1.1t-gtc-ibs.nemo
+  checkpoint_dir: null # checkpoint file dir. This is used to load the PTL checkpoint generated during the GPT training
+  checkpoint_name: null # PTL checkpoint file name, only used for PTL checkpoint loading
+  hparams_file: null # model configuration file, only used for PTL checkpoint loading
+
+tasks: ['arc-challenge', 'arc-easy', 'race-middle', 'race-high', 'winogrande', 'rte', 'hellaswag', 'boolq', 'piqa']
+batch_size: 16
+data_path: /data/imoshkov/lm_evaluation_data/
+results_path: /home/imoshkov/ensembles/results
