@@ -1,0 +1,11 @@
+task,metric,Cerebras-GPT-1.3B
+arc-challenge,acc_norm_ans_ctx,0.27303754266211605
+arc-easy,acc_norm_ans_ctx,0.4650673400673401
+race-middle,acc_norm_ans_ctx,0.4115598885793872
+race-high,acc_norm_ans_ctx,0.36192109777015435
+winogrande,acc_norm_tokens,0.5193370165745856
+rte,acc_norm_tokens,0.5234657039711191
+hellaswag,acc_norm_tokens,0.38109938259310894
+boolq,acc_norm_tokens,0.5865443425076453
+piqa,acc_norm_tokens,0.6697497279651795
+,average,0.46575356029895953

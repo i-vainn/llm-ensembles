@@ -1,0 +1,11 @@
+task,metric,gpt-neo-1.3B
+arc-challenge,acc_norm_ans_ctx,0.3165529010238908
+arc-easy,acc_norm_ans_ctx,0.5033670033670034
+race-middle,acc_norm_ans_ctx,0.43454038997214484
+race-high,acc_norm_ans_ctx,0.3747855917667238
+winogrande,acc_norm_tokens,0.5493291239147593
+rte,acc_norm_tokens,0.5487364620938628
+hellaswag,acc_norm_tokens,0.4849631547500498
+boolq,acc_norm_tokens,0.6128440366972477
+piqa,acc_norm_tokens,0.7149075081610446
+,average,0.504447352416303

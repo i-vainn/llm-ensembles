@@ -1,0 +1,11 @@
+task,metric,opt-1.3b
+arc-challenge,acc_norm_ans_ctx,0.32337883959044367
+arc-easy,acc_norm_ans_ctx,0.40824915824915825
+race-middle,acc_norm_ans_ctx,0.4011142061281337
+race-high,acc_norm_ans_ctx,0.368210405946255
+winogrande,acc_norm_tokens,0.5951065509076559
+rte,acc_norm_tokens,0.5270758122743683
+hellaswag,acc_norm_tokens,0.5389364668392751
+boolq,acc_norm_tokens,0.6217125382262997
+piqa,acc_norm_tokens,0.7072905331882481
+,average,0.4990082790388708
